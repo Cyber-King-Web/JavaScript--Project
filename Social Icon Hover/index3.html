@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>hover</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        div {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        ul {
+            display: flex;
+        }
+
+        ul li {
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            list-style: none;
+            border: 2px solid darkcyan;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            cursor: pointer;
+        }
+
+        ul li i {
+            color: darkcyan;
+        }
+
+        ul li::before {
+            content: "";
+            position: absolute;
+            width: inherit;
+            height: inherit;
+            background: darkcyan;
+            border-radius: 50%;
+            transition: all .3s linear;
+            z-index: -1;
+            opacity: 0;
+        }
+
+        ul li:hover:before {
+            transform: scale(.8);
+            opacity: 1;
+        }
+
+        ul li:hover i {
+            color: whitesmoke;
+        }
+
+        ul li::after {
+            content: "";
+            position: absolute;
+            width: inherit;
+            height: inherit;
+            border: 2px dashed darkcyan;
+            border-radius: 50%;
+            opacity: 0;
+        }
+
+        ul li:hover:after {
+            transform: scale(.9);
+            opacity: 1;
+            animation: rotate 20s linear infinite;
+        }
+
+        @-webkit-keyframes rotate {
+            0% {
+                transform: rotate(0deg) scale(.9);
+            }
+
+            100% {
+                transform: rotate(360deg) scale(.9);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li><i class="fa-solid fa-3x fa-heart-circle-plus"></i></li>
+            <li><i class="fa-solid fa-3x fa-mars-double"></i></li>
+            <li><i class="fa-solid fa-3x fa-person"></i></li>
+            <li><i class="fa-solid fa-3x fa-venus-double"></i></li>
+        </ul>
+    </div>
+</body>
+
+</html>

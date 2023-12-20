@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Urbanist", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --color: #e7e7e7;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(
+      to right top,
+      rgba(5, 25, 55, 0.9),
+      /* Adjust the opacity by changing the alpha value (0.9 in this example) */
+        rgba(0, 77, 122, 0.9),
+      rgba(0, 135, 147, 0.9),
+      rgba(0, 191, 114, 0.9),
+      rgba(168, 235, 18, 0.9)
+    ),
+    url("https://images.pexels.com/photos/3888151/pexels-photo-3888151.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+h1 {
+  font-size: 6.2rem;
+  color: var(--color);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Jost", sans-serif;
+  margin: 4.8rem 0;
+}
+
+p {
+  font-size: 1.9rem;
+  text-transform: capitalize;
+  color: rgb(0, 0, 0, 0.8);
+}
+
+section {
+  width: 70rem;
+  height: 50rem;
+  /* background-color: rgba(0, 0, 0, 0.8); */
+}
+
+.main-textarea {
+  width: 100%;
+  /* border  */
+}
+
+.text-area {
+  width: 100%;
+  resize: none;
+  padding: 2.4rem;
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  line-height: 1.6;
+}
+
+.text-area:focus-visible {
+  outline: none;
+}
+
+.main-content {
+  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-content div {
+  flex: 1;
+  padding: 2.2rem;
+  flex-basis: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-content div:nth-child(odd) {
+  border-right: 0.1rem solid grey;
+}
+
+.main-content div:nth-child(1),
+.main-content div:nth-child(2) {
+  border-bottom: 0.1rem solid grey;
+}
+
+div p:first-child {
+  margin-bottom: 0.6rem;
+  color: var(--text-color);
+  font-size: 2.8rem;
+  font-weight: bold;
+  font-family: "Jost", sans-serif;
+}
+
+.main-content div .change-color {
+  color: red;
+}

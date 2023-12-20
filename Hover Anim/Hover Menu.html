@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <style>
+        body,html {
+  margin: 0;
+  font: bold 14px/1.4 'Open Sans', arial, sans-serif;
+  background: #000;
+}
+
+        ul { 
+          margin: 150px auto 0; 
+          padding: 0; 
+          list-style: none; 
+          display: table;
+          width: 600px;
+          text-align: center;
+        }
+
+        li { 
+          display: table-cell; 
+          position: relative; 
+          padding: 15px 0;
+        }
+        a {
+          color: #fff;
+          text-transform: uppercase;
+          text-decoration: none;
+          letter-spacing: 0.15em;     
+          display: inline-block;
+          padding: 15px 20px;
+          position: relative;
+        }
+
+a:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 4px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+    a:hover:after { 
+      width: 100%; 
+      left: 0;
+      background-color:#00fffc;
+    }
+
+        @media screen and 
+        (max-height: 300px) {
+            ul {
+                margin-top: 40px;
+            }
+        }
+
+
+        
+
+    </style>
+</head>
+<body>
+            <ul>
+              <li><a href="#">
+                 About</a></li>
+              <li><a href="#">
+                 Portfolio</a></li>
+              <li><a href="#">
+                 Blog</a></li>
+              <li><a href="#">
+                 Contact</a></li>
+            </ul>
+
+            
+ 
+
+</body>
+</html>

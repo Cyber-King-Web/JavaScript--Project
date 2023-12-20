@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>hover </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .main_div {
+            width: 100vw;
+            height: 100vh;
+            background: hsl(191, 57%, 10%);
+            display: grid;
+            place-items: center;
+        }
+
+        ul {
+            display: flex;
+        }
+
+        ul li {
+            width: 150px;
+            height: 150px;
+            margin: 20px;
+            border-radius: 50%;
+            list-style: none;
+            background: hsl(191, 77%, 94%);
+            display: grid;
+            place-items: center;
+            cursor: pointer;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            box-shadow: 0px 17px 22px -10px rgba(200, 203, 204, 0.75);
+        }
+
+        ul li a {
+            text-decoration: none;
+        }
+
+        ul li i {
+            color: #000;
+            transition: all .3s linear;
+        }
+
+        ul li:hover i {
+            color: #fff;
+        }
+
+        ul li::before {
+            content: '';
+            position: absolute;
+            width: 120%;
+            height: 120%;
+            transform: rotate(60deg);
+            top: 100%;
+            left: -40%;
+            z-index: -1;
+        }
+
+        ul li:hover:before {
+            animation: hover .8s 1;
+            animation-fill-mode: forwards;
+        }
+
+        @-webkit-keyframes hover {
+            0% {
+                top: 90%;
+                left: -50%;
+            }
+
+            50% {
+                top: -60%;
+                left: -10%;
+            }
+
+            100% {
+                top: -10%;
+                left: -10%;
+            }
+        }
+
+
+        ul li:nth-child(1):before {
+            background: #3867d6;
+        }
+
+        ul li:nth-child(2):before {
+            background: #eb3b5a;
+        }
+
+        ul li:nth-child(3):before {
+            background: #45aaf2;
+        }
+
+        ul li:nth-child(4):before {
+            background: #20bf6b;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main_div">
+        <ul>
+            <li><a href="#"><i class="fa-brands fa-facebook-f fa-3x"></i></a></li>
+
+            <li><a href="#"><i class="fa-brands fa-instagram fa-3x"></i></a></li>
+
+            <li><a href="#"><i class="fa-brands fa-twitter fa-3x"></i></a></li>
+
+            <li><a href="#"><i class="fa-brands fa-whatsapp fa-3x"></i></a></li>
+        </ul>
+    </div>
+</body>
+
+</html>

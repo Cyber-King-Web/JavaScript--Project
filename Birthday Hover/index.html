@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Birthday</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Roboto Mono', monospace;
+        transition: all 0.5s linear;
+    }
+
+    body {
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .box {
+        width: 300px;
+        height: 355px;
+        background: rgb(243, 21, 89);
+        display: flex;
+        align-items: center;
+        justify-content: ;
+        flex-direction: column;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: rgb(243, 21, 89) 0px 22px 70px 4px;
+        position: relative;
+    }
+
+    .box span {
+        position: absolute;
+        /* background: #000; */
+        width: 100%;
+        height: 100%;
+        transition: all 0.2s linear;
+    }
+
+    .box .door-1 {
+        background: #000;
+        clip-path: polygon(50% 50%, 2% 100%, 98% 100%);
+    }
+
+    .box .door-2 {
+        background: #000;
+        clip-path: polygon(50% 50%, 0 3%, 0 97%);
+    }
+
+    .box .door-3 {
+        background: #000;
+        clip-path: polygon(50% 50%, 98% 0, 2% 0);
+    }
+
+    .box .door-4 {
+        background: #000;
+        clip-path: polygon(50% 50%, 100% 97%, 100% 3%);
+    }
+
+    .box:hover .door-1 {
+        background: #000;
+        clip-path: polygon(50% 90%, 2% 100%, 98% 100%);
+    }
+
+    .box:hover .door-2 {
+        background: #000;
+        clip-path: polygon(10% 50%, 0 3%, 0 97%);
+    }
+
+    .box:hover .door-3 {
+        background: #000;
+        clip-path: polygon(50% 10%, 98% 0, 2% 0);
+    }
+
+    .box:hover .door-4 {
+        background: #000;
+        clip-path: polygon(90% 50%, 100% 97%, 100% 3%);
+    }
+
+    .box img {
+        width: 100%;
+        opacity: 0;
+        transition: all 0.5s linear;
+    }
+
+    .box:hover {
+        background: rgb(2, 250, 97);
+        box-shadow: rgb(2, 250, 97) 0px 22px 70px 4px;
+
+    }
+
+    .box:hover img {
+        opacity: 1;
+    }
+
+    .box h2 {
+        text-transform: capitalize;
+        letter-spacing: 1px;
+        padding-top: 35px;
+        opacity: 0;
+        transition: all 0.5s linear;
+        color: rgb(243, 21, 89);
+        font-weight: 500;
+    }
+
+    .box .head-2 {
+        padding-top: 0;
+        font-size: 30px;
+        font-weight: 550;
+    }
+
+    .box:hover h2 {
+        opacity: 1;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+
+        <div class="box" onmousedown="sound.play()">
+            <h2 class="head-1">happy birthday</h2>
+            <h2 class="head-2">dear rizwan</h2>
+            <img src="rizwan.png" alt="">
+
+            <span class="door-1"></span>
+            <span class="door-2"></span>
+            <span class="door-3"></span>
+            <span class="door-4"></span>
+        </div>
+
+    </div>
+
+    <script>
+        var sound = new Audio();
+        sound.src = "Happy Birthday Rizwan.mp3"
+    </script>
+
+</body>
+
+</html>

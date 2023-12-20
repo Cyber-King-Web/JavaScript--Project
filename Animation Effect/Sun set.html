@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sun Set</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    Body {
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        place-items: center;
+    }
+
+    .universe {
+        width: 350px;
+        height: 350px;
+        background: yellow;
+        border-radius: 5px;
+        display: grid;
+        place-items: center;
+        animation: uni 10s ease-out infinite;
+    }
+
+    @keyframes uni {
+        10% {
+            background: yellow;
+        }
+
+        20% {
+            background: yellow;
+        }
+
+        30% {
+            background: black;
+        }
+
+        40% {
+            background: black;
+        }
+
+        50% {
+            background: black;
+        }
+
+        60% {
+            background: black;
+        }
+
+        70% {
+            background: black;
+        }
+
+        80% {
+            background: yellow;
+        }
+
+        90% {
+            background: yellow;
+        }
+
+        100% {
+            background: yellow;
+        }
+    }
+
+    .sun {
+        width: 200px;
+        height: 200px;
+        background: orange;
+        border-radius: 50%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .sun::before {
+        content: "";
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        background: black;
+        border-radius: inherit;
+        /* left: 100%; */
+        top: 0;
+        animation: sun 10s ease-in-out infinite;
+    }
+
+    @keyframes sun {
+        0% {
+            left: 100%;
+        }
+
+        50% {
+            left: 0;
+            transform: scale(0.95);
+        }
+
+        100% {
+            left: -100%;
+        }
+    }
+</style>
+
+<body>
+
+    <div class="universe">
+        <div class="sun"></div>
+    </div>
+
+</body>
+
+</html>

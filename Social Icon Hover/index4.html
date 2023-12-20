@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Call Ring</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        .main_div {
+            width: 100vw;
+            height: 100vh;
+            background: hsl(0, 0%, 20%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .center_div {
+            width: 12rem;
+            height: 12rem;
+            background: #20bf6b;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .center_div::before {
+            content: '';
+            position: absolute;
+            width: calc(100% + 4rem);
+            height: calc(100% + 4rem);
+            border: .2rem solid #20bf6b;
+            border-radius: 50%;
+            animation: ring 1.5s linear infinite;
+        }
+
+        .center_div::after {
+            content: '';
+            position: absolute;
+            width: calc(100% + 4rem);
+            height: calc(100% + 4rem);
+            border: .2rem solid #20bf6b;
+            border-radius: 50%;
+            animation: ring 1.5s linear infinite;
+            animation-delay: .5s;
+        }
+
+        @-webkit-keyframes ring {
+            0% {
+                transform: scale(0);
+            }
+
+            100% {
+                transform: scale(1.5);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main_div">
+        <div class="center_div">
+            <i class="fa-sharp fa-solid fa-phone-flip fa-4x"></i>
+        </div>
+    </div>
+</body>
+
+</html>

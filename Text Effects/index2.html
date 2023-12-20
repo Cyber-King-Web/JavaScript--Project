@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Best Text Animation Loading</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        svg {
+            width: 150%;
+            position: absolute;
+            top: 50%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+        }
+
+        svg text {
+            font-family: arial;
+            font-size: 5rem;
+            stroke: #FC427B;
+            stroke-width: 2px;
+            fill: transparent;
+            animation: anim 3s infinite alternate;
+        }
+
+        @-webkit-keyframes anim {
+            from {
+                stroke-dasharray: 0 70%;
+            }
+
+            to {
+                stroke-dasharray: 50% 0;
+                stroke-dashoffset: 10%;
+            }
+        }
+
+        @media(max-width: 400px) {
+            svg {
+                width: 440px;
+                left: 20%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main_div">
+        <svg>
+            <text x="40%" y="65">Cyber King Coder !!</text>
+        </svg>
+    </div>
+</body>
+
+</html>

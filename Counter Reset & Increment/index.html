@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Counter Reset & Increment</title>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@600&display=swap');
+
+/* font-family: 'Noto Sans Devanagari', sans-serif; */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  counter-reset: style;
+}
+
+.main_div {
+  width: 100vw;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  background: grey;
+}
+
+.center_div {
+  width: 50%;
+  height: 100%;
+  background: #000;
+  border: 3px solid red;
+  border-radius: 10px;
+}
+
+h1 {
+  color: snow;
+  text-align: center;
+  text-decoration: underline;
+  margin: 30px auto;
+}
+
+p {
+  color: snow;
+  text-align: center;
+  font-family: 'Noto Sans Devanagari', sans-serif;
+  font-size: 18px;
+  margin: 30px 30px;
+  line-height: 40px;
+}
+
+p::before {
+  content: counter(style) ". ";
+  width: 10px;
+  height: 10px;
+  counter-increment: style 1;
+  margin-right: 10px;
+  background: crimson;
+  color: white;
+  padding: 5px;
+  border-radius: 50%;
+
+}
+
+        
+    </style>
+</head>
+
+<body>
+ <div class="main_div">
+    <div class="center_div">
+      <h1>Counter Reset & Increment </h1>
+
+
+      <p>गंगा नदी भारत की सबसे महत्त्वपूर्ण नदी है जो भारत और बांग्लादेश में मिलाकर २,५१० किमी की दूरी तय करती हुई उत्तरांचल में हिमालय से लेकर बंगाल की खाड़ी के सुंदरवन तक विशाल भू भाग को सींचती है, देश की प्राकृतिक संपदा ही नहीं, जन जन की भावनात्मक आस्था का आधार भी है।</p>
+
+      <p>नेल्सन रोलीह्लला मंडेला (जन्म १८ जुलाई १९१८) दक्षिण अफ्रीका के भूतपूर्व राष्ट्रपति हैं। राष्ट्रपति बनने से पूर्व दक्षिण अफ्रीका में सदियों से चल रहे अपार्थीड के प्रमुख विरोधी एवं अफ्रीकी नेशनल कांग्रेस एवं इसके सशस्त्र गुट उमखोंतो वे सिजवे के अध्यक्ष रह चुके हैं। उन्होंने अपनी जिंदगी के २७ वर्ष रॉबेन द्वीप पर कारागर में रंगभेद नीति के खिलाफ लडते हुए बिताए।</p>
+
+      <p>दक्षिण अफ्रीका एवं समूचे विश्व में रंगभेद नीति का विरोध करते हुए जहां श्री मंडेला पूरी दुनिया में स्वतंत्रता एवं समानता के प्रतीक बन गये थे वहीं रंगभेद की नीति पर चलने वाली सरकारें श्री मंडेला को कम्यूनिस्ट एवं आतंकवादी बताती थी और अफ्रीकन नेशनल कांग्रेस को ऐसे लोगों की पनाहगाह।</p>
+
+      <p>कोमोरोस हिन्द महासागर में अफ़्रीका के पूर्वी छोर पर उत्तरी मैडागास्कर और उत्तर-पूर्व मोज़ाम्बिक के बीच स्थित एक द्वीपीय देश है। यह अफ़्रीका महाद्वीप में क्षेत्रफल की दृष्टि तीसरा सबसे छोटा और जनसंख्या की दृष्टि से छठा सबसे छोटा देश है लेकिन यहाँ जनसंख्या घनत्व बहुत अधिक है। अरब जगत से सम्बन्ध रखने वाले कोमोरोस देश का नाम अरबी भाषा के शब्द क्वामार (चान्द) से निकला है। चार बड़े और अन्य छोटे द्वीपों वाला यह देश पर्यावरण की विविधता के कारण दुनिया में अलग ही स्थान रखता है। </p>
+
+      <p>फ्रीका महाद्वीप के नाम के पीछे कई कहानियाँ एवं धारणाएँ हैं। 1981 में प्रकाशित एक शोध के अनुसार अफ्रीका शब्द की उत्पत्ति बरबर भाषा के शब्द इफ्री या इफ्रान से हुई है जिसका अर्थ गुफा होता है जो गुफा में रहने वाली जातियों के लिए प्रयोग किया जाता था।</p>
+
+    </div>
+  </div>
+</body>
+
+</html>

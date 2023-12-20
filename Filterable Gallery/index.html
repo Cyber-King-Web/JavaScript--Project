@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Project Name: Filterable Portfolio Gallery
+  Youtube: https://youtube.com/@devRasen
+  Copyright: ©MdRasen -->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filterable Portfolio Gallery | devRasen</title>
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <!-- Top row -->
+        <div class="top-row">
+            <h3 class="sub-title">Our Projects</h3>
+            <h1 class="title">Creative Works.</h1>
+        </div>
+        <!-- Bottom row -->
+        <div class="bottom-row">
+            <!-- Gallery filter -->
+            <div class="gallery-filter">
+                <button type="button" class="filter-item active" data-filter="uiux">
+                    UI/UX Design
+                </button>
+                <button type="button" class="filter-item" data-filter="webdesign">
+                    Web Design
+                </button>
+                <button type="button" class="filter-item" data-filter="branding">
+                    Branding
+                </button>
+            </div>
+            <!-- Gallery items -->
+            <div class="gallery-items">
+                <!-- Gallery item -->
+                <div class="gallery-item uiux">
+                    <img src="images/project_img1.jpg" alt="project_img1" />
+                    <div class="details">
+                        <h2 class="title">UI/UX One</h2>
+                        <p class="short-desc">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+                            saepe!
+                        </p>
+                        <button type="button">
+                            Live Preview
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- Gallery item -->
+                <div class="gallery-item uiux">
+                    <img src="images/project_img2.jpg" alt="project_img2" />
+                    <div class="details">
+                        <h2 class="title">UI/UX Two</h2>
+                        <p class="short-desc">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+                            saepe!
+                        </p>
+                        <button type="button">
+                            Live Preview
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- Gallery item -->
+                <div class="gallery-item uiux">
+                    <img src="images/project_img3.jpg" alt="project_img3" />
+                    <div class="details">
+                        <h2 class="title">UI/UX Three</h2>
+                        <p class="short-desc">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+                            saepe!
+                        </p>
+                        <button type="button">
+                            Live Preview
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- Gallery item -->
+                <div class="gallery-item webdesign hide">
+                    <img src="images/project_img3.jpg" alt="project_img3" />
+                    <div class="details">
+                        <h2 class="title">Web Design One</h2>
+                        <p class="short-desc">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+                            saepe!
+                        </p>
+                        <button type="button">
+                            Live Preview
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- Gallery item -->
+                <div class="gallery-item webdesign hide">
+                    <img src="images/project_img2.jpg" alt="project_img2" />
+                    <div class="details">
+                        <h2 class="title">Web Design Two</h2>
+                        <p class="short-desc">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+                            saepe!
+                        </p>
+                        <button type="button">
+                            Live Preview
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- Gallery item -->
+                <div class="gallery-item webdesign hide">
+                    <img src="images/project_img1.jpg" alt="project_img1" />
+                    <div class="details">
+                        <h2 class="title">Web Design Three</h2>
+                        <p class="short-desc">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+                            saepe!
+                        </p>
+                        <button type="button">
+                            Live Preview
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- Gallery item -->
+                <div class="gallery-item branding hide">
+                    <img src="images/project_img2.jpg" alt="project_img2" />
+                    <div class="details">
+                        <h2 class="title">Branding One</h2>
+                        <p class="short-desc">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+                            saepe!
+                        </p>
+                        <button type="button">
+                            Live Preview
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- Gallery item -->
+                <div class="gallery-item branding hide">
+                    <img src="images/project_img1.jpg" alt="project_img1" />
+                    <div class="details">
+                        <h2 class="title">Branding Two</h2>
+                        <p class="short-desc">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+                            saepe!
+                        </p>
+                        <button type="button">
+                            Live Preview
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- Gallery item -->
+                <div class="gallery-item branding hide">
+                    <img src="images/project_img3.jpg" alt="project_img3" />
+                    <div class="details">
+                        <h2 class="title">Branding Three</h2>
+                        <p class="short-desc">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+                            saepe!
+                        </p>
+                        <button type="button">
+                            Live Preview
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>

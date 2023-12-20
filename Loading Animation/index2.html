@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Loading</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        .main_div {
+            width: 100vw;
+            height: 100vh;
+            background: hsl(204, 81%, 94%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .center_div {
+            width: 15rem;
+            height: 15rem;
+            /* background: red; */
+            position: relative;
+        }
+
+        span {
+            width: 5rem;
+            height: 5rem;
+            border-radius: 3px;
+            position: absolute;
+            background: hsl(0, 10%, 20%);
+            -webkit-box-shadow: 0px 20px 45px -15px rgba(0, 0, 0, 1);
+            -moz-box-shadow: 0px 20px 45px -15px rgba(0, 0, 0, 1);
+            box-shadow: 0px 20px 45px -15px rgba(0, 0, 0, 1);
+            animation: round 3s linear infinite;
+        }
+
+        @-webkit-keyframes round {
+            0% {
+                left: 0;
+                top: 0;
+            }
+
+            12.5% {
+                left: 50%;
+                top: 0;
+            }
+
+            25% {
+                left: 50%;
+                top: 0;
+            }
+
+            37.5% {
+                left: 50%;
+                top: 50%;
+            }
+
+            50% {
+                left: 50%;
+                top: 50%;
+            }
+
+            62.5% {
+                left: 0;
+                top: 50%;
+            }
+
+            75% {
+                left: 0;
+                top: 50%;
+            }
+
+            87.5% {
+                left: 0;
+                top: 0;
+            }
+
+            100% {
+                left: 0;
+                top: 0;
+            }
+        }
+
+        span:nth-child(2) {
+            animation-delay: 1s;
+        }
+
+        span:nth-child(3) {
+            animation-delay: 2s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main_div">
+        <div class="center_div">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</body>
+
+</html>

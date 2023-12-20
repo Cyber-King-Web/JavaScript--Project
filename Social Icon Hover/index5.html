@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>hover</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+
+        }
+
+        html,
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            background: #000;
+        }
+
+        .center_div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+        }
+
+        .outer {
+            margin: 0 50px;
+            background: #111;
+            position: relative;
+        }
+
+        .button {
+            height: 70px;
+            width: 220px;
+            border-radius: 50px;
+
+        }
+
+        .circle {
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+        }
+
+        .outer button,
+        .outer span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+
+        .outer button {
+            background: #111;
+            color: #f2f2f2;
+            outline: none;
+            border: none;
+            font-size: 20px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            cursor: pointer;
+            z-index: 9;
+        }
+
+        .button button {
+            height: 60px;
+            width: 210px;
+            border-radius: 50px;
+
+        }
+
+        .circle button {
+            height: 180px;
+            width: 180px;
+            border-radius: 50%;
+
+        }
+
+        .outer span {
+            height: 100%;
+            width: 100%;
+            background: inherit;
+        }
+
+        .button span {
+            border-radius: 50px;
+        }
+
+        .circle span {
+            border-radius: 50%;
+        }
+
+        .outer:hover span:nht-child(1) {
+            filter: blur(7px);
+        }
+
+        .outer:hover span:nht-child(2) {
+            filter: blur(14px);
+        }
+
+        .outer:hover {
+            background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+            animation: rot 1.5s linear infinite;
+        }
+
+        @-webkit-keyframes rot {
+            0% {
+                filter: hue-rotate(0deg);
+            }
+
+            100% {
+                filter: hue-rotate(360deg);
+            }
+        }
+
+        @media(max-width: 640px) {
+            .center_div {
+                flex-wrap: wrap;
+                flex-direction: column;
+            }
+
+            .outer {
+                margin: 50px 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center_div">
+        <div class="outer button">
+            <button>Click Me</button>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="outer circle">
+            <button>Click Me</button>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</body>
+
+</html>

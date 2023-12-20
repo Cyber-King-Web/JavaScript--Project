@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ball Jump</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            background: #192a56;
+        }
+
+        div {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div ul {
+            display: flex;
+            border-bottom: 20px solid whitesmoke;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        div ul li {
+            width: 60px;
+            height: 60px;
+            /* background-color: red; */
+            list-style: none;
+            border-radius: 50%;
+            margin: 0px 20px;
+            animation: jump 1s linear infinite;
+        }
+
+        @keyframes jump {
+            0% {
+                transform: translateY(0);
+                /* background-color: #A7FFE4; */
+            }
+
+            50% {
+                transform: translateY(-150px);
+            }
+
+            100% {
+                transform: translateY(0);
+                /* margin: 1px; */
+                /* background-color: #FFA1CF; */
+            }
+        }
+
+        div ul li:nth-child(1) {
+            background-color: #48dbfb;
+            animation-delay: 0.2s;
+        }
+
+        div ul li:nth-child(2) {
+            background-color: #f368e0;
+            animation-delay: 0.6s;
+        }
+
+        div ul li:nth-child(3) {
+            background-color: #00d2d3;
+            animation-delay: 0.4s;
+        }
+
+        div ul li:nth-child(4) {
+            background-color: #a7ffe4;
+            animation-delay: 0.8s;
+        }
+
+        div ul li:nth-child(5) {
+            background-color: #ffd32a;
+            animation-delay: 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+
+</html>

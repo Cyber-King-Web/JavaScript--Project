@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>text</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #252839;
+
+        }
+
+        h2 {
+            position: relative;
+            font-size: 50px;
+            color: #252839;
+            -webkit-text-stroke: 0.3vw #383d52;
+            text-transform: uppercase;
+
+        }
+
+        h2::before {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            color: #01fe87;
+            -webkit-text-stroke: 0vw #383d52;
+            border-right: 2px solid #01fe87;
+            overflow: hidden;
+            animation: text 6s linear infinite;
+
+        }
+
+        @keyframes text {
+
+            0%,
+            10%,
+            100% {
+                width: 0%;
+            }
+
+            70% {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h2 data-text="Cyber_King...">Cyber_King...</h2>
+    </div>
+</body>
+
+</html>
